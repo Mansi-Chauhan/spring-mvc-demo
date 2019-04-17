@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,6 +18,12 @@ public class FormController {
 		return "show-form";
 	}
 	
+	@RequestMapping("/showForm2")
+	public String showForm2(Model model) {
+       MyClass obj=new MyClass();
+		model.addAttribute("message3",obj);
+		return "show-form";
+	}
 	
 	//Creating a method to process from
     
@@ -38,8 +45,17 @@ public class FormController {
 	@RequestMapping("/processForm3")
 	public String processForm3(@RequestParam("studentname") String theName, Model model) {
 		
+		
 		theName="YOU "+theName.toUpperCase();
 		model.addAttribute("message2",theName);
+		
+		return "process-form";
+	}
+	
+	@RequestMapping("/processForm4")
+	public String processForm3(@ModelAttribute("message3") MyClass obj) {
+		System.out.println("firstName = "+obj.getFirstName()+ "last name =" + obj.getLastName());
+		
 		return "process-form";
 	}
 	

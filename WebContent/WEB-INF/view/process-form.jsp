@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -15,6 +16,12 @@
   <br><br>
   
   From Model using request param: ${message2}
+  
+  
+  <br>
+  
+  TRYING: ${message3.firstName}
+  
   
  </body>
 </html>
