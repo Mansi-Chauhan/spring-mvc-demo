@@ -21,8 +21,8 @@ public class FormController {
 	@RequestMapping("/showForm2")
 	public String showForm2(Model model) {
        MyClass obj=new MyClass();
-		model.addAttribute("message3",obj);
-		return "show-form";
+		model.addAttribute("myClass",obj);
+		return "showForm2";
 	}
 	
 	//Creating a method to process from
@@ -53,9 +53,9 @@ public class FormController {
 	}
 	
 	@RequestMapping("/processForm4")
-	public String processForm3(@ModelAttribute("message3") MyClass obj) {
-		System.out.println("firstName = "+obj.getFirstName()+ "last name =" + obj.getLastName());
-		
+	public String processForm4(@ModelAttribute("myClass") MyClass obj) {
+		System.out.println("firstname = "+ obj.getFirstName() + " lastname =" + obj.getLastName());
+		System.out.println("kvksnvsanvn");
 		return "process-form";
 	}
 	

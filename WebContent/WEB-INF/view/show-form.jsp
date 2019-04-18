@@ -1,22 +1,23 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
- <head>
- 
-     <title> Showing you the form</title>
+<head>
 
- </head>
- <body>
+<title>Showing you the form</title>
 
-    <form action="processForm3" method="get">
-      <input type="text" name="studentname" placeholder="what is your name"/>
-      <input type="submit"/>
+</head>
+<body>
 
-    </form>
-    
-   
+	<form action="processForm3" method="get">
+		<input type="text" name="studentname" placeholder="what is your name" />
+		<input type="submit" />
 
-  </body>
+	</form>
+
+
+
+</body>
 
 
 
